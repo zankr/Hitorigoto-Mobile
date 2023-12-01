@@ -1,56 +1,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="?android:attr/windowBackground"
-    android:paddingHorizontal="24dp"
-    android:paddingVertical="48dp"
+    android:padding="24dp"
     android:orientation="vertical"
-    tools:context=".GettingStarted">
-    <!-- Your layout content goes here -->
+    tools:ignore="HardcodedText"
+    tools:context=".About">
 
-    <LinearLayout
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_hitorigoto"
+        android:contentDescription="Logo Hitorigoto"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:textAppearance="@style/TextAppearance.Hitorigoto.TitleLarge"
+        android:text="@string/title_about"
+        android:textAlignment="center"
+        android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/logo_hitorigoto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/logo_splashscreen" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="48dp" />
+    <TextView
+        android:id="@+id/Hitorigoto_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Hitorigoto.BodyLarge"
+        android:text="@string/desc_about"
+        android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/Hitorigoto_judul"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/pbold"
-            android:text="Apa Itu Hitorigoto?"
-            android:textAlignment="center"
-            android:textSize="28sp" />
-        
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="16dp"/>
-
-        <TextView
-            android:id="@+id/Hitorigoto_text"
-            android:layout_width="311dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/medium"
-            android:text="Hitorigoto merupakan situs web cerdas cermat yang berfokuskan untuk memberikan materi kursus tentang pembelajaran bahasa Jepang. Secara etimologi, Hitorigoto berasal dari dua kata, yaitu ‘hitori (一人)’ yang berarti satu orang atau sendirian dan ‘goto (事)’ yang berarti kepentingan, secara terminologi, hitorigoto berarti belajar secara mandiri. Bersama Hitorigoto, belajar bahasa jepang akan lebih efisien dan menyenangkan."
-            android:textAlignment="center"
-            android:textSize="16sp" />
-
-    </LinearLayout>
 </LinearLayout>

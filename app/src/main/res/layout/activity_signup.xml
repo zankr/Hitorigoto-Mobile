@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="48dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText"
+    tools:context=".SignUp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            style="@style/Widget.Material3.Button.IconButton"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Kembali ke Getting Started"
+            android:onClick="backGetStarted"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/signup"
+            android:textAppearance="@style/TextAppearance.Hitorigoto.TitleMedium"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.Hitorigoto.BodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/desc_signup" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        app:startIconDrawable="@drawable/ic_user"
+        android:hint="@string/label_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        app:startIconDrawable="@drawable/ic_mail"
+        android:hint="@string/label_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        app:startIconDrawable="@drawable/ic_password"
+        app:endIconMode="password_toggle"
+        android:hint="@string/label_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <Button
+        style="Widget.Material3.Button"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:text="@string/signup"
+        android:onClick="goMain" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.Hitorigoto.LabelLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun?"/>
+
+        <Button
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin"
+            android:onClick="goSignIn"/>
+
+    </LinearLayout>
+
+</LinearLayout>
