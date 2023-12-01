@@ -3,8 +3,12 @@ package com.example.hitorigoto.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.example.hitorigoto.Database.dbUser;
@@ -22,6 +26,8 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        customizeStatusBar();
 
         db = new dbUser(this);
 
@@ -68,6 +74,20 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void customizeStatusBar() {
+        // Check if the device is running on Android 5.0 (Lollipop) or higher
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            // Set the status bar color to md_theme_light_surface
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#F8FDFF"));
+
+            // Set the status bar text and icon color to black
+            View decor = getWindow().getDecorView();
+            decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
     }
 
     private void setErrorForEmptyFields() {
