@@ -14,8 +14,6 @@ public class SignIn extends AppCompatActivity {
     ActivitySigninBinding binding;
     dbHelper DbHelper;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +23,11 @@ public class SignIn extends AppCompatActivity {
 
         DbHelper = new dbHelper(this);
 
-        binding.loginButton.setOnClickListener(new View.OnClickListener() {
+        binding.btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = binding.loginUsername.getText().toString();
-                String password = binding.loginPassword.getText().toString();
+                String username = binding.tfEmail.getText().toString();
+                String password = binding.tfPassword.getText().toString();
 
                 if (username.equals("") || password.equals("")){
                     Toast.makeText(SignIn.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();

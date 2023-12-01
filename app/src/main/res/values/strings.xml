@@ -7,9 +7,9 @@
     <string name="desc_signup">Buat akun baru</string>
     <string name="signin">Masuk</string>
     <string name="desc_signin">Masuk ke akun Anda</string>
-    <string name="label_username">Username</string>
+    <string name="label_full_name">Nama lengkap</string>
     <string name="label_email">Email</string>
-    <string name="label_password">Password</string>
+    <string name="label_password">Kata sandi</string>
     <string name="title_about">Apa itu Hitorigoto?</string>
     <string name="desc_about">Hitorigoto merupakan situs web cerdas cermat yang berfokuskan untuk memberikan materi kursus tentang pembelajaran bahasa Jepang. Secara etimologi, Hitorigoto berasal dari dua kata, yaitu ‘hitori (一人)’ yang berarti satu orang atau sendirian dan ‘goto (事)’ yang berarti kepentingan, secara terminologi, hitorigoto berarti belajar secara mandiri. Bersama Hitorigoto, belajar bahasa jepang akan lebih efisien dan menyenangkan.</string>
 </resources>

@@ -23,12 +23,12 @@ public class SignUp extends AppCompatActivity {
 
         DbHelper = new dbHelper(this);
 
-        binding.signupButton.setOnClickListener(new View.OnClickListener() {
+        binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = binding.signupUsername.getText().toString();
-                String email = binding.signupEmail.getText().toString();
-                String password = binding.signupPassword.getText().toString();
+                String username = binding.tfFullName.getText().toString();
+                String email = binding.tfEmail.getText().toString();
+                String password = binding.tfPassword.getText().toString();
 
                 if (username.equals("") || email.equals("") || password.equals("")){
                     Toast.makeText(SignUp.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();

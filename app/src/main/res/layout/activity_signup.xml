@@ -66,17 +66,16 @@
         android:layout_height="36dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
         app:startIconDrawable="@drawable/ic_user"
-        android:hint="@string/label_username">
+        android:hint="@string/label_full_name">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_full_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/signup_username"
             android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -86,7 +85,6 @@
         android:layout_height="24dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
@@ -94,9 +92,9 @@
         android:hint="@string/label_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/signup_email"
             android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -106,7 +104,6 @@
         android:layout_height="24dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
@@ -115,9 +112,9 @@
         android:hint="@string/label_password">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/signup_password"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -127,8 +124,8 @@
         android:layout_height="36dp"/>
 
     <Button
+        android:id="@+id/btn_sign_up"
         style="Widget.Material3.Button"
-        android:id="@+id/signup_button"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
