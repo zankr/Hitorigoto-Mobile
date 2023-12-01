@@ -20,7 +20,7 @@ public class GettingStarted extends AppCompatActivity {
     }
 
     public void goHaveAccount(View view) {
-        startActivity(new Intent(this, SignUp.class));
+        startActivity(new Intent(this, SignIn.class));
         finish();
     }
 
