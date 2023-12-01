@@ -95,7 +95,6 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void backToGettingStarted(View view) {
-        startActivity(new Intent(this, GettingStarted.class));
         finish();
     }
 

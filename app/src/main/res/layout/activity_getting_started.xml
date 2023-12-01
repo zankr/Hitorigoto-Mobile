@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
             android:text="@string/btn_getting_started"
-            android:onClick="goGetStarted"/>
+            android:onClick="goToSignUp"/>
 
         <Space
             android:layout_width="match_parent"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
             android:text="@string/btn_have_account"
-            android:onClick="goHaveAccount"/>
+            android:onClick="goToSignIn"/>
     </LinearLayout>
 
 

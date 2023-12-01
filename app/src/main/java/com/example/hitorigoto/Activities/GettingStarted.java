@@ -16,14 +16,14 @@ public class GettingStarted extends AppCompatActivity {
         setContentView(R.layout.activity_getting_started);
     }
 
-    public void goGetStarted(View view) {
+    public void goToSignUp(View view) {
         startActivity(new Intent(this, SignUp.class));
-        finish();
+        onStop();
     }
 
-    public void goHaveAccount(View view) {
+    public void goToSignIn(View view) {
         startActivity(new Intent(this, SignIn.class));
-        finish();
+        onStop();
     }
 
 }

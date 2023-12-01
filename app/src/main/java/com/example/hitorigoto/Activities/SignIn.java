@@ -74,8 +74,7 @@ public class SignIn extends AppCompatActivity {
         binding.layoutPassword.setError("");
     }
 
-    public void backToGettingStarted(View view) {
-        startActivity(new Intent(this, GettingStarted.class));
+    public void backToGettingStarted(View view) {;
         finish();
     }
 
