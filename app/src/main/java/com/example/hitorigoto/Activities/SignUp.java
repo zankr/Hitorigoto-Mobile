@@ -33,47 +33,78 @@ public class SignUp extends AppCompatActivity {
                 String password = binding.tfPassword.getText().toString();
 
                 if (fullName.equals("") || email.equals("") || password.equals("")) {
-                    Toast.makeText(SignUp.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
+                    setErrorForEmptyFields(); // Function to set error for empty fields
                 } else {
                     User user = new User();
                     user.setFull_name(fullName);
                     user.setEmail(email);
                     user.setPassword(password);
 
-                    int signupResult = db.checkAccount(email, password);
+                    int checkUser = db.checkAccount(email, password);
 
-                    if (signupResult == 0) {
+                    if (checkUser == 0) {
                         long insert = db.addUserDetail(user);
 
                         if (insert != -1) {
-                            Toast.makeText(SignUp.this, "Signup Successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            // Signup success
+                            clearFields();
+                            Intent intent = new Intent(getApplicationContext(), SignIn.class);
                             startActivity(intent);
                             finish();
                         } else {
-                            Toast.makeText(SignUp.this, "Signup Failed", Toast.LENGTH_SHORT).show();
+                            // Signup failed
+                            Toast.makeText(SignUp.this, "Daftar akun gagal dilakukan", Toast.LENGTH_SHORT).show();
                         }
-                    } else if (signupResult == 3) {
-                        Toast.makeText(SignUp.this, "Email already in use", Toast.LENGTH_SHORT).show();
+                    } else if (checkUser == 2) {
+                        // Email already in use
+                        clearLayouts();
+                        binding.layoutEmail.setError("Email sudah terdaftarkan");
                     } else {
-                        Toast.makeText(SignUp.this, "User already exists", Toast.LENGTH_SHORT).show();
+                        // User already exists
+                        clearLayouts();
+                        Toast.makeText(SignUp.this, "Akun sudah terdaftarkan", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
+
     }
 
-    public void backGetStarted(View view) {
+    private void setErrorForEmptyFields() {
+        if (binding.tfFullName.getText().toString().equals("")) {
+            binding.layoutFullName.setError("Masukkan nama lengkap");
+        }
+        if (binding.tfEmail.getText().toString().equals("")) {
+            binding.layoutEmail.setError("Masukkan email");
+        }
+        if (binding.tfPassword.getText().toString().equals("")) {
+            binding.layoutPassword.setError("Masukkan kata sandi");
+        }
+    }
+
+    private void clearFields() {
+        binding.tfFullName.setText("");
+        binding.tfEmail.setText("");
+        binding.tfPassword.setText("");
+    }
+
+    private void clearLayouts() {
+        binding.layoutFullName.setError("");
+        binding.layoutEmail.setError("");
+        binding.layoutPassword.setError("");
+    }
+
+    public void backToGettingStarted(View view) {
         startActivity(new Intent(this, GettingStarted.class));
         finish();
     }
 
-    public void goMain(View view) {
+    public void goToMain(View view) {
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 
-    public void goSignIn(View view) {
+    public void goToSignIn(View view) {
         startActivity(new Intent(this, SignIn.class));
         finish();
     }

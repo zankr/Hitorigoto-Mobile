@@ -31,36 +31,60 @@ public class SignIn extends AppCompatActivity {
                 String password = binding.tfPassword.getText().toString();
 
                 if (email.equals("") || password.equals("")) {
-                    Toast.makeText(SignIn.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
+                    setErrorForEmptyFields(); // Function to set error for empty fields
                 } else {
-                    int signinResult = db.checkAccount(email, password);
+                    int loginResult = db.checkAccount(email, password);
 
-                    if (signinResult == 1) {
-                        Toast.makeText(SignIn.this, "Login Successfully", Toast.LENGTH_SHORT).show();
+                    if (loginResult == 1) {
+                        // Login success
+                        clearFields();
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         finish();
-                    } else if (signinResult == 2) {
-                        Toast.makeText(SignIn.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+                    } else if (loginResult == 2) {
+                        // Invalid credentials
+                        clearLayouts();
+                        binding.layoutPassword.setError("Kata sandi salah");
                     } else {
-                        Toast.makeText(SignIn.this, "Account not found", Toast.LENGTH_SHORT).show();
+                        // Account not found
+                        clearLayouts();
+                        Toast.makeText(SignIn.this, "Akun tidak ditemukan", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
     }
 
-    public void backGetStarted(View view) {
+    private void setErrorForEmptyFields() {
+        if (binding.tfEmail.getText().toString().equals("")) {
+            binding.layoutEmail.setError("Masukkan email");
+        }
+        if (binding.tfPassword.getText().toString().equals("")) {
+            binding.layoutPassword.setError("Masukkan kata sandi");
+        }
+    }
+
+    private void clearFields() {
+        binding.tfEmail.setText("");
+        binding.tfPassword.setText("");
+    }
+
+    private void clearLayouts() {
+        binding.layoutEmail.setError("");
+        binding.layoutPassword.setError("");
+    }
+
+    public void backToGettingStarted(View view) {
         startActivity(new Intent(this, GettingStarted.class));
         finish();
     }
 
-    public void goMain(View view) {
+    public void goToMain(View view) {
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 
-    public void goSignUp(View view) {
+    public void goToSignUp(View view) {
         startActivity(new Intent(this, SignUp.class));
         finish();
     }
