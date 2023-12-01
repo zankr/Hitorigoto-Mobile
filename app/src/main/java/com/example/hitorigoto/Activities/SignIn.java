@@ -7,47 +7,47 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.hitorigoto.Database.dbHelper;
+import com.example.hitorigoto.Database.dbUser;
 import com.example.hitorigoto.R;
 import com.example.hitorigoto.databinding.ActivitySigninBinding;
 
 public class SignIn extends AppCompatActivity {
 
     ActivitySigninBinding binding;
-    dbHelper DbHelper;
+    dbUser db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signin);
         binding = ActivitySigninBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        DbHelper = new dbHelper(this);
+        db = new dbUser(this);
 
         binding.btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = binding.tfEmail.getText().toString();
+                String email = binding.tfEmail.getText().toString();
                 String password = binding.tfPassword.getText().toString();
 
-                if (username.equals("") || password.equals("")){
+                if (email.equals("") || password.equals("")) {
                     Toast.makeText(SignIn.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
                 } else {
-                    Boolean checkCredentials = DbHelper.checkUsernamePassword(username, password);
+                    int signinResult = db.checkAccount(email, password);
 
-                    if (checkCredentials == true){
-                        Toast.makeText(SignIn.this, "Login Succesfully", Toast.LENGTH_SHORT).show();
+                    if (signinResult == 1) {
+                        Toast.makeText(SignIn.this, "Login Successfully", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
-                    } else {
+                        finish();
+                    } else if (signinResult == 2) {
                         Toast.makeText(SignIn.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(SignIn.this, "Account not found", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
-
-
     }
 
     public void backGetStarted(View view) {
