@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen"
+            android:name=".Activities.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,20 +21,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GettingStarted"
+            android:name=".Activities.GettingStarted"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".Activities.SignUp"
             android:exported="false" />
         <activity
-            android:name=".SignIn"
+            android:name=".Activities.SignIn"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".About"
+            android:name=".Activities.About"
             android:exported="false" />
 
         <meta-data

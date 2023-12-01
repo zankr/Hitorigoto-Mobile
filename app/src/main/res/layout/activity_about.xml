@@ -7,7 +7,7 @@
     android:padding="24dp"
     android:orientation="vertical"
     tools:ignore="HardcodedText"
-    tools:context=".About">
+    tools:context=".Activities.About">
 
     <ImageView
         android:layout_width="120dp"

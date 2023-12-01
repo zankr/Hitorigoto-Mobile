@@ -1,4 +1,4 @@
-package com.example.hitorigoto;
+package com.example.hitorigoto.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.hitorigoto.Database.dbHelper;
+import com.example.hitorigoto.R;
 import com.example.hitorigoto.databinding.ActivitySigninBinding;
 
 public class SignIn extends AppCompatActivity {

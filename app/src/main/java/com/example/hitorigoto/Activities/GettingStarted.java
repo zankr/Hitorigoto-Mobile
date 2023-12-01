@@ -1,10 +1,12 @@
-package com.example.hitorigoto;
+package com.example.hitorigoto.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.hitorigoto.R;
 
 public class GettingStarted extends AppCompatActivity {
 

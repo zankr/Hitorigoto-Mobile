@@ -1,7 +1,9 @@
-package com.example.hitorigoto;
+package com.example.hitorigoto.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.hitorigoto.R;
 
 public class About extends AppCompatActivity {
 

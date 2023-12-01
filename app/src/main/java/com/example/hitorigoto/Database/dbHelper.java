@@ -1,4 +1,4 @@
-package com.example.hitorigoto;
+package com.example.hitorigoto.Database;
 
 import android.content.ContentValues;
 import android.content.Context;

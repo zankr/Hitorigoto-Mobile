@@ -8,7 +8,7 @@
     android:paddingBottom="48dp"
     android:orientation="vertical"
     tools:ignore="HardcodedText"
-    tools:context=".SignIn">
+    tools:context=".Activities.SignIn">
 
     <LinearLayout
         android:layout_width="match_parent"
