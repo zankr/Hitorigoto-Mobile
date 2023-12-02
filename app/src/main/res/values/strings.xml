@@ -12,6 +12,26 @@
     <string name="label_password">Kata sandi</string>
     <string name="title_about">Apa itu Hitorigoto?</string>
     <string name="desc_about">Hitorigoto merupakan situs web cerdas cermat yang berfokuskan untuk memberikan materi kursus tentang pembelajaran bahasa Jepang. Secara etimologi, Hitorigoto berasal dari dua kata, yaitu ‘hitori (一人)’ yang berarti satu orang atau sendirian dan ‘goto (事)’ yang berarti kepentingan, secara terminologi, hitorigoto berarti belajar secara mandiri. Bersama Hitorigoto, belajar bahasa jepang akan lebih efisien dan menyenangkan.</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc_about_1">Hitorigoto merupakan situs web cerdas cermat yang berfokuskan untuk memberikan materi kursus tentang pembelajaran bahasa Jepang. Secara etimologi, Hitorigoto berasal dari dua kata, yaitu ‘hitori (一人)’ yang berarti satu orang atau sendirian dan ‘goto (事)’ yang berarti kepentingan, secara terminologi, hitorigoto berarti belajar secara mandiri. Bersama Hitorigoto, belajar bahasa jepang akan lebih efisien dan menyenangkan.</string>
+    <string name="title_about_1">Apa Itu Hitorigoto?</string>
+    <string name="title_about_2">Apa Itu JLPT?</string>
+    <string name="desc_about_2">JLPT adalah singkatan dari Japanese Language Proficiency Test atau dalam bahasa Jepangnya disebut 日本語能力試験 (nihongo nouryoku shiken). Ujian kemampuan bahasa Jepang yang ditujukan untuk orang-orang yang memiliki bahasa ibu bukan bahasa Jepang.</string>
+    <string name="title_about_3">Tujuan</string>
+    <string name="desc_about_3">JLPT diadakan di seluruh dunia untuk mengevaluasi dan mengesahkan kemahiran berbahasa Jepang dari penutur asing.</string>
+    <string name="title_about_4">Sejarah JLPT</string>
+    <string name="desc_about_4">JLPT pertama kali diselenggarakan pada tahun 1984 sebagai tanggapan atas meningkatnya permintaan sertifikasi bahasa Jepang yang terstandar. Awalnya 7.000 orang mengikuti tes. Hingga tahun 2003, JLPT merupakan salah satu syarat bagi orang asing untuk masuk universitas Jepang. Sejak 2003, Examination for Japanese University Admission for International Students (EJU) digunakan oleh sebagian besar universitas untuk tujuan ini; tidak seperti JLPT, yang hanya merupakan ujian pilihan ganda, EJU berisi bagian yang mengharuskan peserta ujian menulis dalam bahasa Jepang.</string>
+    <string name="title_about_5">Level JLPT</string>
+    <string name="desc_about_5a">Selain hiragana dan katakana, dapat membaca dan memahami frasa, kalimat, paragraf pendek menggunakan kanji dasar.</string>
+    <string name="desc_about_5b">Dapat memahami dan mendengarkan informasi yang diperlukan. Dapat mendengarkan percakapan dengan kecepatan normal tentang topik kehidupan sehari-hari.</string>
+    <string name="title_about_bacaan">Bacaan</string>
+    <string name="title_about_pendengaran">Pendengaran</string>
+    <string name="desc_about_5c">Dapat memahami dan membaca kalimat yang ditulis tentang topik familiar dengan menggunakan kosa kata dasar kanji.</string>
+    <string name="desc_about_5d">Dapat memahami isi dari percakapan sehari-hari apabila berbicara dengan perlahan.</string>
+    <string name="desc_about_5e">Dapat membaca dan memahami sebuah kalimat mengenai isi spesifik yang ditulis tentang tema kehidupan sehari-hari.</string>
+    <string name="desc_about_5f">Dalam kehidupan sehari - hari, dapat mendengarkan percakapan dengan kecepatan normal, dan dapat memahami aliran cerita dan isi utama kalimat.</string>
+    <string name="desc_about_5g">Dapat memahami dengan jelas tesis utama dan isi artikel dalam membaca surat kabar dan majalah.</string>
+    <string name="desc_about_5h">Dalam kehidupan sehari - hari, dapat mendengarkan percakapan dengan kecepatan normal, dan dapat memahami aliran cerita dan isi utama kalimat.</string>
+    <string name="desc_about_5i">Tingkat dapat membaca surat kabar dan mengkritik. Struktur kalimat yang kompleks dan isinya akan ditanya apakah logis dan bisa mengerti. Dan, Anda akan diminta untuk membaca antar baris dari isi kalimat.</string>
+    <string name="desc_about_5j">Mampu mendengarkan dan memahami berbagai jenis percakapan yang diucapkan dengan kecepatan alami, dapat memahami secara detail isi pembicaraan dan karakter, Tingkat ini sesuai dengan pemahaman penuh dari bahasa Jepang.</string>
 </resources>

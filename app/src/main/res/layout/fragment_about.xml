@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,183 +13,202 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp">
-
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="36dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_hitorigoto" />
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="36dp"
-                android:layout_marginBottom="36dp"
+                android:paddingVertical="36dp"
+                android:paddingHorizontal="24dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_hitorigoto"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextLogo.DisplaySmall"
+                    android:textColor="@color/md_theme_light_onBackground"
+                    android:text="@string/app_name"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.TitleLarge"
+                    android:textColor="@color/md_theme_light_onBackground"
+                    android:textStyle="bold"
+                    android:text="@string/title_about_1"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.BodySmall"
+                    android:textColor="@color/md_theme_light_onBackground"
+                    android:text="@string/desc_about_1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_theme_light_primaryContainer"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="36dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_about_jlpt" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.TitleLarge"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_theme_light_onSurface"
+                    android:text="@string/title_about_2"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.BodySmall"
+                    android:textColor="@color/md_theme_light_onSurface"
+                    android:text="@string/desc_about_2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_theme_light_primary"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="36dp"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
-                    
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:gravity="center"
-                    android:text="Apa Itu Hitorigoto?"
-                    android:textSize="22sp" />
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.TitleLarge"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:textStyle="bold"
+                    android:text="@string/title_about_3"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
 
                 <com.codesgood.views.JustifiedTextView
-                    
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat"
-
-                    android:text="Hitorigoto merupakan situs web cerdas cermat yang berfokuskan untuk memberikan materi kursus tentang pembelajaran bahasa Jepang. Secara etimologi, Hitorigoto berasal dari dua kata, yaitu ‘hitori (一人)’ yang berarti satu orang atau sendirian dan ‘goto (事)’ yang berarti kepentingan, secara terminologi, hitorigoto berarti belajar secara mandiri. Bersama Hitorigoto, belajar bahasa jepang akan lebih efisien dan menyenangkan."
-                    android:textAlignment="viewStart"
-
-                    android:textSize="12sp" />
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.BodySmall"
+                    android:textColor="@color/md_theme_light_onPrimary"
+                    android:text="@string/desc_about_3" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="288dp"
-                android:background="@drawable/cardjlpt1"
-                android:orientation="vertical"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="24dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-
-                <ImageView
-                    
-
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/jlpt" />
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="36dp"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardBackgroundColor="@color/md_theme_light_surface">
 
-                <TextView
-                    
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:gravity="center"
-                    android:text="Apa Itu JLPT?"
-                    android:textSize="22sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="36dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <com.codesgood.views.JustifiedTextView
+                        <ImageView
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/img_about_sejarahjlpt" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat"
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp"/>
 
-                    android:text="JLPT adalah singkatan dari Japanese Language Proficiency Test atau dalam bahasa Jepangnya disebut 日本語能力試験 (nihongo nouryoku shiken). Ujian kemampuan bahasa Jepang yang ditujukan untuk orang-orang yang memiliki bahasa ibu bukan bahasa Jepang."
-                    android:textAlignment="viewStart"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.Hitorigoto.TitleLarge"
+                            android:textColor="@color/md_theme_light_onSurface"
+                            android:textStyle="bold"
+                            android:text="@string/title_about_4"/>
 
-                    android:textSize="12sp" />
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp"/>
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.Hitorigoto.BodySmall"
+                            android:textColor="@color/md_theme_light_onSurface"
+                            android:text="@string/desc_about_4"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="192dp"
-                android:layout_marginVertical="36dp"
-                android:background="@drawable/cardjlpt2"
+                android:layout_height="wrap_content"
+                android:background="#FEFEDF"
+                android:gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="24dp">
-
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="36dp">
 
                 <TextView
-                    
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:gravity="center"
-                    android:text="Tujuan"
-                    android:textColor="#FFFFFF"
-                    android:textSize="22sp" />
-
-                <com.codesgood.views.JustifiedTextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat"
-
-                    android:text="JLPT diadakan di seluruh dunia untuk mengevaluasi dan mengesahkan kemahiran berbahasa Jepang dari penutur asing."
-                    android:textAlignment="viewStart"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="464dp"
-                android:layout_marginVertical="36dp"
-                android:background="@drawable/cardjlpt3"
-                android:orientation="vertical"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="24dp">
-
-
-                <ImageView
-
-                    android:layout_width="172dp"
-                    android:layout_height="172dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/sejarahjlpt" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:gravity="center"
-                    android:text="Sejarah JLPT"
-                    android:textColor="#000000"
-                    android:textSize="34sp" />
-
-                <com.codesgood.views.JustifiedTextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat"
-
-                    android:text="JLPT pertama kali diselenggarakan pada tahun 1984 sebagai tanggapan atas meningkatnya permintaan sertifikasi bahasa Jepang yang terstandar. Awalnya 7.000 orang mengikuti tes. Hingga tahun 2003, JLPT merupakan salah satu syarat bagi orang asing untuk masuk universitas Jepang. Sejak 2003, Examination for Japanese University Admission for International Students (EJU) digunakan oleh sebagian besar universitas untuk tujuan ini; tidak seperti JLPT, yang hanya merupakan ujian pilihan ganda, EJU berisi bagian yang mengharuskan peserta ujian menulis dalam bahasa Jepang."
-                    android:textAlignment="viewStart"
-                    android:textColor="#000000"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1772dp"
-                android:layout_marginVertical="36dp"
-                android:background="@drawable/cardjlpt4"
-                android:orientation="vertical"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="24dp">
-
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:gravity="center"
-                    android:text="Level JLPT"
-                    android:textColor="#000000"
-                    android:textSize="34sp" />
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.TitleLarge"
+                    android:textStyle="bold"
+                    android:text="@string/title_about_5" />
 
                 <View
-                    
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginVertical="16dp"
@@ -200,60 +219,48 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
                     <ImageView
-
                         android:layout_width="wrap_content"
                         android:layout_height="106dp"
-                        android:src="@drawable/n5" />
+                        android:src="@drawable/img_about_n5" />
 
                     <TextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Bacaan"
+                        android:text="@string/title_about_bacaan"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-
-                        android:text="Selain hiragana dan katakana, dapat membaca dan memahami frasa, kalimat, paragraf pendek menggunakan kanji dasar."
+                        android:text="@string/desc_about_5a"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
 
                     <TextView
-
-                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Pendengaran"
+                        android:text="@string/title_about_pendengaran"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
-
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-                        android:text="Dapat memahami dan mendengarkan informasi yang diperlukan. Dapat mendengarkan percakapan dengan kecepatan normal tentang topik kehidupan sehari-hari."
+                        android:text="@string/desc_about_5b"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
+
                 </LinearLayout>
 
                 <View
-                    
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginVertical="16dp"
@@ -264,60 +271,48 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
                     <ImageView
-
                         android:layout_width="match_parent"
                         android:layout_height="106dp"
-                        android:src="@drawable/n4" />
+                        android:src="@drawable/img_about_n4" />
 
                     <TextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Bacaan"
+                        android:text="@string/title_about_bacaan"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-
-                        android:text="Dapat memahami dan membaca kalimat yang ditulis tentang topik familiar dengan menggunakan kosa kata dasar kanji."
+                        android:text="@string/desc_about_5c"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
 
                     <TextView
-
-                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Pendengaran"
+                        android:text="@string/title_about_pendengaran"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
-                        
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-                        android:text="Dapat memahami isi dari percakapan sehari-hari apabila berbicara dengan perlahan."
+                        android:text="@string/desc_about_5d"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
+
                 </LinearLayout>
 
                 <View
-                    
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginVertical="16dp"
@@ -328,60 +323,48 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
                     <ImageView
-
                         android:layout_width="match_parent"
                         android:layout_height="106dp"
-                        android:src="@drawable/n3" />
+                        android:src="@drawable/img_about_n3" />
 
                     <TextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Bacaan"
+                        android:text="@string/title_about_bacaan"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-
-                        android:text="Dapat membaca dan memahami sebuah kalimat mengenai isi spesifik yang ditulis tentang tema kehidupan sehari-hari."
+                        android:text="@string/desc_about_5e"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
 
                     <TextView
-
-                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Pendengaran"
+                        android:text="@string/title_about_pendengaran"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
-                        
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-                        android:text="Dalam kehidupan sehari - hari, dapat mendengarkan percakapan dengan kecepatan normal, dan dapat memahami aliran cerita dan isi utama kalimat."
+                        android:text="@string/desc_about_5f"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
+
                 </LinearLayout>
 
                 <View
-                    
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginVertical="16dp"
@@ -392,60 +375,48 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
                     <ImageView
-
                         android:layout_width="match_parent"
                         android:layout_height="106dp"
-                        android:src="@drawable/n2" />
+                        android:src="@drawable/img_about_n2" />
 
                     <TextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Bacaan"
+                        android:text="@string/title_about_bacaan"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-
-                        android:text="Dapat memahami dengan jelas tesis utama dan isi artikel dalam membaca surat kabar dan majalah."
+                        android:text="@string/desc_about_5g"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
 
                     <TextView
-
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Pendengaran"
+                        android:text="@string/title_about_pendengaran"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
-
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-                        android:text="Dalam kehidupan sehari - hari, dapat mendengarkan percakapan dengan kecepatan normal, dan dapat memahami aliran cerita dan isi utama kalimat."
+                        android:text="@string/desc_about_5h"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
+
                 </LinearLayout>
 
                 <View
-                    
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginVertical="16dp"
@@ -456,62 +427,47 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
                     <ImageView
-
                         android:layout_width="match_parent"
                         android:layout_height="106dp"
-                        android:src="@drawable/n1" />
+                        android:src="@drawable/img_about_n1" />
 
                     <TextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Bacaan"
+                        android:text="@string/title_about_bacaan"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-
-                        android:text="Tingkat dapat membaca surat kabar dan mengkritik. Struktur kalimat yang kompleks dan isinya akan ditanya apakah logis dan bisa mengerti. Dan, Anda akan diminta untuk membaca antar baris dari isi kalimat."
+                        android:text="@string/desc_about_5i"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
 
                     <TextView
-
-                        
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="12dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Pendengaran"
+                        android:text="@string/title_about_pendengaran"
                         android:textSize="18sp" />
 
                     <com.codesgood.views.JustifiedTextView
-
-                        
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
-
                         android:fontFamily="@font/montserrat"
-                        android:text="Mampu mendengarkan dan memahami berbagai jenis percakapan yang diucapkan dengan kecepatan alami, dapat memahami secara detail isi pembicaraan dan karakter, Tingkat ini sesuai dengan pemahaman penuh dari bahasa Jepang."
+                        android:text="@string/desc_about_5j"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="12sp" />
+
                 </LinearLayout>
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
-
-
 </FrameLayout>
