@@ -12,4 +12,6 @@
     <string name="label_password">Kata sandi</string>
     <string name="title_about">Apa itu Hitorigoto?</string>
     <string name="desc_about">Hitorigoto merupakan situs web cerdas cermat yang berfokuskan untuk memberikan materi kursus tentang pembelajaran bahasa Jepang. Secara etimologi, Hitorigoto berasal dari dua kata, yaitu ‘hitori (一人)’ yang berarti satu orang atau sendirian dan ‘goto (事)’ yang berarti kepentingan, secara terminologi, hitorigoto berarti belajar secara mandiri. Bersama Hitorigoto, belajar bahasa jepang akan lebih efisien dan menyenangkan.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
