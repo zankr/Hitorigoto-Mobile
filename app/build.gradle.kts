@@ -37,6 +37,8 @@ android {
 }
 
 dependencies {
+    implementation ("androidx.compose.material3:material3:1.1.2")
+    implementation ("androidx.compose.material3:material3-window-size-class:1.1.2")
     implementation ("com.codesgood:justifiedtextview:1.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
