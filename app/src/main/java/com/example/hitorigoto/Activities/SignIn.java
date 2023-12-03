@@ -50,6 +50,7 @@ public class SignIn extends AppCompatActivity {
                         User loggedInUser = db.getAccount(email, password);
                         saveLoginSession(loggedInUser.getFull_name(), loggedInUser.getEmail());
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
                         finish();
                     } else if (loginResult == 2) {
@@ -69,7 +70,7 @@ public class SignIn extends AppCompatActivity {
     private void customizeStatusBar() {
         // Check if the device is running on Android 5.0 (Lollipop) or higher
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            // Set the status bar color to md_theme_light_surface
+            // Set the status bar color to top component color
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.parseColor("#F8FDFF"));
@@ -100,11 +101,6 @@ public class SignIn extends AppCompatActivity {
     }
 
     public void backToGettingStarted(View view) {;
-        finish();
-    }
-
-    public void goToMain(View view) {
-        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 

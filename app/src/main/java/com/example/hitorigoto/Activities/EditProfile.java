@@ -1,7 +1,13 @@
 package com.example.hitorigoto.Activities;
 
+import static android.app.PendingIntent.getActivity;
+
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +25,8 @@ public class EditProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityEditProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        customizeStatusBar();
 
         // Get data from the intent
         Bundle extras = getIntent().getExtras();
@@ -105,5 +113,19 @@ public class EditProfile extends AppCompatActivity {
         binding.layoutEmail.setError("");
         binding.layoutPasswordNew.setError("");
         binding.layoutPasswordConfirm.setError("");
+    }
+
+    private void customizeStatusBar() {
+        // Check if the device is running on Android 5.0 (Lollipop) or higher
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            // Set the status bar color to top component color
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#F8FDFF"));
+
+            // Set the status bar text and icon color to black
+            View decor = getWindow().getDecorView();
+            decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
     }
 }

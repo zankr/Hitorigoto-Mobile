@@ -6,7 +6,6 @@
     android:paddingHorizontal="24dp"
     android:paddingTop="12dp"
     android:paddingBottom="48dp"
-    android:background="@color/md_theme_light_surface"
     android:orientation="vertical"
     tools:ignore="HardcodedText"
     tools:context=".Activities.SignUp">
@@ -137,8 +136,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="16dp"
-        android:text="@string/signup"
-        android:onClick="goToMain" />
+        android:text="@string/signup"/>
 
     <View
         android:layout_width="wrap_content"

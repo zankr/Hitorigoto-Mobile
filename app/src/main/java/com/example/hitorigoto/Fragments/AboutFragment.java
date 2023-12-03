@@ -76,10 +76,10 @@ public class AboutFragment extends Fragment {
     private void customizeStatusBar() {
         // Check if the device is running on Android 5.0 (Lollipop) or higher
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            // Set the status bar color to match the color of the top component
+            // Set the status bar color to match top component color
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.parseColor("#FFFFFF"));
+            window.setStatusBarColor(Color.parseColor("#F8FDFF"));
 
             // Set the status bar text and icon color to black
             View decor = getActivity().getWindow().getDecorView();

@@ -54,12 +54,13 @@ public class SignUp extends AppCompatActivity {
                         if (insert != -1) {
                             // Signup success
                             clearFields();
+                            showToast("Akun berhasil didaftarkan!");
                             Intent intent = new Intent(getApplicationContext(), SignIn.class);
                             startActivity(intent);
                             finish();
                         } else {
                             // Signup failed
-                            Toast.makeText(SignUp.this, "Daftar akun gagal dilakukan", Toast.LENGTH_SHORT).show();
+                            showToast("Daftar akun gagal dilakukan");
                         }
                     } else if (checkUser == 2) {
                         // Email already in use
@@ -68,7 +69,7 @@ public class SignUp extends AppCompatActivity {
                     } else {
                         // User already exists
                         clearLayouts();
-                        Toast.makeText(SignUp.this, "Akun sudah terdaftarkan", Toast.LENGTH_SHORT).show();
+                        showToast("Akun sudah terdaftarkan");
                     }
                 }
             }
@@ -79,7 +80,7 @@ public class SignUp extends AppCompatActivity {
     private void customizeStatusBar() {
         // Check if the device is running on Android 5.0 (Lollipop) or higher
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            // Set the status bar color to md_theme_light_surface
+            // Set the status bar color to top component color
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.parseColor("#F8FDFF"));
@@ -88,6 +89,10 @@ public class SignUp extends AppCompatActivity {
             View decor = getWindow().getDecorView();
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     private void setErrorForEmptyFields() {
@@ -115,13 +120,6 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void backToGettingStarted(View view) {
-        finish();
-    }
-
-    public void goToMain(View view) {
-        Intent intent = new Intent(SignUp.this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
         finish();
     }
 

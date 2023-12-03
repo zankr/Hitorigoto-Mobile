@@ -137,8 +137,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="16dp"
-        android:text="@string/signin"
-        android:onClick="goToMain" />
+        android:text="@string/signin"/>
 
     <View
         android:layout_width="wrap_content"

@@ -25,7 +25,7 @@ public class GettingStarted extends AppCompatActivity {
     private void customizeStatusBar() {
         // Check if the device is running on Android 5.0 (Lollipop) or higher
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            // Set the status bar color to md_theme_light_surface
+            // Set the status bar color to top component color
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.parseColor("#F8FDFF"));
