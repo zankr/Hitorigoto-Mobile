@@ -61,7 +61,7 @@
 
             android:layout_width="173dp"
             android:layout_height="173dp"
-            android:src="@drawable/img_n5_hiragana" />
+            android:src="@drawable/img_quiz_n5_hiragana" />
 
         <View
             android:layout_width="24dp"
