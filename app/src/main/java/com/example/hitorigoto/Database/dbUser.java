@@ -113,4 +113,34 @@ public class dbUser extends SQLiteOpenHelper {
         c.close();
         return logging_in;
     }
+
+    public int updateUserDetail(String currentEmail, String newEmail, String fullName, String newPassword) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Check if the new email is different from the current email
+        if (!currentEmail.equals(newEmail)) {
+            // Check if the new email is already in use
+            if (isEmailAlreadyUsed(newEmail)) {
+                return -1; // Return -1 to indicate email already in use
+            }
+        }
+
+        ContentValues values = new ContentValues();
+        values.put(KEY_NAME, fullName);
+        values.put(KEY_EMAIL, newEmail);
+        values.put(KEY_PASSWORD, newPassword);
+
+        // Update the user details based on the current email
+        return db.update(TABLE_NAME, values, KEY_EMAIL + "=?", new String[]{currentEmail});
+    }
+
+    private boolean isEmailAlreadyUsed(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + KEY_EMAIL + "=?", new String[]{email});
+        boolean emailExists = cursor.moveToFirst();
+        cursor.close();
+        return emailExists;
+    }
+
+
 }

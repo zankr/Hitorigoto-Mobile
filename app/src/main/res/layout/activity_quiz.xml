@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:freezesText="true"
-                android:text="Score: 0"
+                android:text="Skor: 0"
 
                 android:textAppearance="@style/TextAppearance.Hitorigoto.BodyLarge"
                 android:textColor="#FBFBFB" />
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_view_score"
                 android:freezesText="true"
-                android:text="Question: 1/x"
+                android:text="Pertanyaan: 1/x"
                 android:textAppearance="@style/TextAppearance.Hitorigoto.BodyLarge"
                 android:textColor="#FBFBFB" />
         </LinearLayout>

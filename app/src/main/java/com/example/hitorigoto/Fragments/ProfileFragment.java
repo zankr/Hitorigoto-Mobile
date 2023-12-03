@@ -19,62 +19,18 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.hitorigoto.Activities.EditProfile;
 import com.example.hitorigoto.Activities.GettingStarted;
-import com.example.hitorigoto.Activities.SignIn;
 import com.example.hitorigoto.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ProfileFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment profileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
         // Still inflating the components
         TextView tvProfileFullName = view.findViewById(R.id.profile_fullname);
         TextView tvProfileEmail = view.findViewById(R.id.profile_email);
@@ -83,6 +39,7 @@ public class ProfileFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginSession", Context.MODE_PRIVATE);
         String fullName = sharedPreferences.getString("UserName", "Nama Pengguna");
         String email = sharedPreferences.getString("UserEmail", "email@contoh.com");
+
         // Displaying them
         tvProfileFullName.setText(fullName);
         tvProfileEmail.setText(email);
@@ -95,7 +52,8 @@ public class ProfileFragment extends Fragment {
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Implement intent function to move
+                // Navigate to EditProfile activity and pass user data
+                goToEditProfile(fullName, email);
             }
         });
 
@@ -114,13 +72,24 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
+    private void goToEditProfile(String fullName, String email) {
+        // Create an intent to start EditProfile activity
+        Intent intent = new Intent(getActivity(), EditProfile.class);
+
+        // Pass user information as extras to the intent
+        intent.putExtra("fullName", fullName);
+        intent.putExtra("email", email);
+
+        // Start the EditProfile activity
+        startActivity(intent);
+    }
 
     private void showLogoutConfirmationDialog() {
         new AlertDialog.Builder(getContext())
                 // Message
                 .setTitle("Konfirmasi Logout")
                 // Confirmation?
-                .setMessage("Apakah anda yakin ingin keluar?")
+                .setMessage("Apakah Anda yakin ingin keluar?")
                 .setPositiveButton("Keluar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // User clicked "Keluar" button, handle logout
@@ -131,6 +100,7 @@ public class ProfileFragment extends Fragment {
                 .setIcon(R.drawable.ic_logout)
                 .show();
     }
+
     private void logoutUser() {
         // Clear the login session, for example using SharedPreferences
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginSession", Context.MODE_PRIVATE);
@@ -161,5 +131,4 @@ public class ProfileFragment extends Fragment {
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
     }
-
 }

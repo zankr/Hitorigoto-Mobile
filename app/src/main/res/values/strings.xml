@@ -48,4 +48,8 @@
     <string name="profile_email">%2$s</string>
     <string name="label_edit_profile">Edit Profile</string>
     <string name="label_logout">Keluar Akun</string>
+    <string name="desc_edit_profile">Ubah informasi akun Anda</string>
+    <string name="label_simpan_perubahan">Simpan Perubahan</string>
+    <string name="label_password_new">Kata sandi baru</string>
+    <string name="label_password_confirm">Konfirmasi kata sandi</string>
 </resources>
