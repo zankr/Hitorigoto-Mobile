@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="120dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Activities.EditProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            style="@style/Widget.Material3.Button.IconButton"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="backToMain"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/label_edit_profile"
+            android:textAppearance="@style/TextAppearance.Hitorigoto.TitleMedium"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.Hitorigoto.BodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/desc_edit_profile" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="@color/md_theme_light_secondaryContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="36dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/md_theme_light_surface"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/ic_user"
+                app:errorEnabled="true"
+                android:hint="@string/label_full_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tf_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/md_theme_light_surface"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/ic_mail"
+                app:errorEnabled="true"
+                android:hint="@string/label_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tf_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_password_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/md_theme_light_surface"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/ic_password"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                android:hint="@string/label_password_new">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tf_password_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/md_theme_light_surface"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/ic_password"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                android:hint="@string/label_password_confirm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tf_password_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        style="Widget.Material3.Button"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:text="@string/label_simpan_perubahan"
+        android:onClick="goToMain" />
+
+</LinearLayout>
