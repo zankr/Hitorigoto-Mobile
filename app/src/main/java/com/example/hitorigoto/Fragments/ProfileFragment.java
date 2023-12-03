@@ -106,6 +106,7 @@ public class ProfileFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginSession", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         // This clears all the stored data in SharedPreferences
+        editor.putBoolean("IsLoggedIn", false);
         editor.clear();
         editor.apply();
 
