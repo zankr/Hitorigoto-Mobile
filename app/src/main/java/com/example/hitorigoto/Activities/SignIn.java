@@ -3,6 +3,7 @@ package com.example.hitorigoto.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.example.hitorigoto.Database.dbUser;
+import com.example.hitorigoto.Models.User;
 import com.example.hitorigoto.R;
 import com.example.hitorigoto.databinding.ActivitySigninBinding;
 
@@ -44,6 +46,10 @@ public class SignIn extends AppCompatActivity {
                     if (loginResult == 1) {
                         // Login success
                         clearFields();
+                        // Taking the user as inputted
+                        // and save it in the SharedPreferences
+                        User loggedInUser = db.getAccount(email, password);
+                        saveLoginSession(loggedInUser.getFull_name());
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         finish();
@@ -106,5 +112,12 @@ public class SignIn extends AppCompatActivity {
     public void goToSignUp(View view) {
         startActivity(new Intent(this, SignUp.class));
         finish();
+    }
+
+    private void saveLoginSession(String fullname){
+        SharedPreferences sharedPreferences = getSharedPreferences("LoginSession", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("UserName", fullname);
+        editor.apply();
     }
 }

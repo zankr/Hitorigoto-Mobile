@@ -1,5 +1,7 @@
 package com.example.hitorigoto.Fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.example.hitorigoto.R;
 
@@ -66,11 +69,22 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        // Still inflating the components
+        TextView tvHeroHome = view.findViewById(R.id.tv_hero_home);
+        String userName = getUserName();
+        if (userName != null) {
+            tvHeroHome.setText(getString(R.string.title_hero_home, userName));
+        }
 
         // Call the customizeStatusBar method when the fragment view is created
         customizeStatusBar();
 
         return view;
+    }
+    private String getUserName() {
+        // This will fetch the class that is shared in sharedPreferences, that is current session user
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginSession", Context.MODE_PRIVATE);
+        return sharedPreferences.getString("UserName", "Pengguna");
     }
 
     private void customizeStatusBar() {

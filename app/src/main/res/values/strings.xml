@@ -40,7 +40,7 @@
     <string name="menu_profile">Profile</string>
     <string name="menu_level_test">Level Test</string>
     <string name="course_level">JLPT N5</string>
-    <string name="title_hero_home">Selamat datang Ahmad Bustomi!</string>
+    <string name="title_hero_home">Selamat datang %1$s!</string>
     <string name="desc_hero_home">Semoga harimu menyenangkan.</string>
     <string name="title_course_hero">Mulailah belajar bahasa Jepang di mana saja dan kapan saja!</string>
     <string name="desc_course_hero">Kembangkan kemampuan bahasa Jepang Anda dengan mulai belajar sekarang!</string>
