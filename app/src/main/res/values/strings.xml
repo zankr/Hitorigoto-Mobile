@@ -44,8 +44,8 @@
     <string name="desc_hero_home">Semoga harimu menyenangkan.</string>
     <string name="title_course_hero">Mulailah belajar bahasa Jepang di mana saja dan kapan saja!</string>
     <string name="desc_course_hero">Kembangkan kemampuan bahasa Jepang Anda dengan mulai belajar sekarang!</string>
-    <string name="profile_fullname">Ahmad Bustomi</string>
-    <string name="profile_email">fauzankurniarahman@gmail.com</string>
+    <string name="profile_fullname">%1$s!</string>
+    <string name="profile_email">%2$s</string>
     <string name="label_edit_profile">Edit Profile</string>
     <string name="label_logout">Keluar Akun</string>
 </resources>

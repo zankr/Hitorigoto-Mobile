@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.example.hitorigoto.Database.dbUser;
 import com.example.hitorigoto.Models.User;
-import com.example.hitorigoto.R;
 import com.example.hitorigoto.databinding.ActivitySigninBinding;
 
 public class SignIn extends AppCompatActivity {
@@ -49,7 +48,7 @@ public class SignIn extends AppCompatActivity {
                         // Taking the user as inputted
                         // and save it in the SharedPreferences
                         User loggedInUser = db.getAccount(email, password);
-                        saveLoginSession(loggedInUser.getFull_name());
+                        saveLoginSession(loggedInUser.getFull_name(), loggedInUser.getEmail());
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);
                         finish();
@@ -114,10 +113,11 @@ public class SignIn extends AppCompatActivity {
         finish();
     }
 
-    private void saveLoginSession(String fullname){
+    private void saveLoginSession(String fullname, String email){
         SharedPreferences sharedPreferences = getSharedPreferences("LoginSession", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("UserName", fullname);
+        editor.putString("UserEmail", email);
         editor.apply();
     }
 }
