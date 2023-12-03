@@ -57,10 +57,16 @@ public class StartingQuiz extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadHighscore();
+    }
+
     private void loadHighscore() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         highscore = prefs.getInt(KEY_HIGHSCORE, 0);
-        textViewHighscore.setText("Skor Kamu: " + highscore*20 + "%");
+        textViewHighscore.setText("Skor Kamu: " + highscore * 20 + "%");
     }
 
     private void updateHighscore(int highscoreNew) {

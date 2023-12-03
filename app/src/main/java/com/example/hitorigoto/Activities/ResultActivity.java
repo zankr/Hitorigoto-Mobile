@@ -1,6 +1,10 @@
 package com.example.hitorigoto.Activities;
 
+import static com.example.hitorigoto.Activities.StartingQuiz.KEY_HIGHSCORE;
+import static com.example.hitorigoto.Activities.StartingQuiz.SHARED_PREFS;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -25,13 +29,26 @@ public class ResultActivity extends AppCompatActivity {
         // Display the total score
         textViewTotalScore.setText("" + totalScore*20);
 
-//        textViewTotalScore.setText(totalScore*20);
+        // textViewTotalScore.setText(totalScore*20);
+        updateHighscore(totalScore);
     }
 
     public void goToMain(View view) {
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
+
+    private void updateHighscore(int currentScore) {
+        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        int savedHighscore = prefs.getInt(KEY_HIGHSCORE, 0);
+
+        if (currentScore > savedHighscore) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt(KEY_HIGHSCORE, currentScore);
+            editor.apply();
+        }
+    }
+
 }
 
 

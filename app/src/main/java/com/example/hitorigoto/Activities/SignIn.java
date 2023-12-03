@@ -116,6 +116,8 @@ public class SignIn extends AppCompatActivity {
     private void saveLoginSession(String fullname, String email){
         SharedPreferences sharedPreferences = getSharedPreferences("LoginSession", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        // This right here will handle all the cache
+        editor.putBoolean("IsLoggedIn", true);
         editor.putString("UserName", fullname);
         editor.putString("UserEmail", email);
         editor.apply();
