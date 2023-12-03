@@ -71,6 +71,7 @@
                             android:layout_weight="1"/>
 
                         <Button
+                            android:id="@+id/btn_level_test"
                             style="@style/Widget.Material3.Button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -79,7 +80,7 @@
                             app:iconSize="24dp"
                             app:iconTint="@color/md_theme_light_onSecondaryContainer"
                             android:textColor="@color/md_theme_light_onSecondaryContainer"
-                            android:text="@string/menu_level_test"/>
+                            android:text="@string/menu_level_test" />
 
                     </LinearLayout>
                 </com.google.android.material.appbar.MaterialToolbar>

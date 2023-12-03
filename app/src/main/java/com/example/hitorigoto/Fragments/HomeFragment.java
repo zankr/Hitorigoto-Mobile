@@ -1,6 +1,7 @@
 package com.example.hitorigoto.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -13,8 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.hitorigoto.Activities.StartingQuiz;
 import com.example.hitorigoto.R;
 
 /**
@@ -64,6 +67,7 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -79,6 +83,15 @@ public class HomeFragment extends Fragment {
         // Call the customizeStatusBar method when the fragment view is created
         customizeStatusBar();
 
+        Button btnStartQuiz = view.findViewById(R.id.btn_level_test);
+        btnStartQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the StartingQuiz activity
+                Intent intent = new Intent(getActivity(), StartingQuiz.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
     private String getUserName() {
@@ -100,4 +113,6 @@ public class HomeFragment extends Fragment {
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
     }
+
+
 }
