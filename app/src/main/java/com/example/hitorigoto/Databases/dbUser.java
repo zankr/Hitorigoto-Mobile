@@ -1,4 +1,4 @@
-package com.example.hitorigoto.Database;
+package com.example.hitorigoto.Databases;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;

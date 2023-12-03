@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hitorigoto.Database.dbUser;
+import com.example.hitorigoto.Databases.dbUser;
 import com.example.hitorigoto.databinding.ActivityEditProfileBinding;
 
 public class EditProfile extends AppCompatActivity {

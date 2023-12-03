@@ -3,15 +3,18 @@ package com.example.hitorigoto.Fragments;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.hitorigoto.Adapters.CourseAdapter;
+import com.example.hitorigoto.Models.CourseData;
 import com.example.hitorigoto.R;
 
 public class CourseFragment extends Fragment {
@@ -28,6 +31,14 @@ public class CourseFragment extends Fragment {
 
         // Call the customizeStatusBar method when the fragment view is created
         customizeStatusBar();
+
+        // Initialize RecyclerView
+        RecyclerView recyclerView = view.findViewById(R.id.rv_course);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        // Initialize Adapter
+        CourseAdapter courseAdapter = new CourseAdapter(CourseData.getListData(), getActivity());
+        recyclerView.setAdapter(courseAdapter);
 
         return view;
     }

@@ -12,7 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.example.hitorigoto.Database.dbUser;
+import com.example.hitorigoto.Databases.dbUser;
 import com.example.hitorigoto.Models.User;
 import com.example.hitorigoto.databinding.ActivitySigninBinding;
 

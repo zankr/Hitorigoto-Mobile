@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hitorigoto.Database.dbQuiz;
+import com.example.hitorigoto.Databases.dbQuiz;
 import com.example.hitorigoto.Models.Question;
 import com.example.hitorigoto.R;
 
