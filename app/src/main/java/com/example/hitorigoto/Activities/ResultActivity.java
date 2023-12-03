@@ -1,6 +1,8 @@
 package com.example.hitorigoto.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -21,6 +23,16 @@ public class ResultActivity extends AppCompatActivity {
         int totalScore = getIntent().getIntExtra(QuizActivity.EXTRA_SCORE, 0);
 
         // Display the total score
-        textViewTotalScore.setText("Total Score: " + totalScore*20 +"%");
+        textViewTotalScore.setText("" + totalScore*20);
+
+//        textViewTotalScore.setText(totalScore*20);
+    }
+
+    public void goToMain(View view) {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }
+
+
+

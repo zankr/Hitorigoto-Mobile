@@ -1,21 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorQuizBackground"
-    android:padding="16dp"
+    android:background="@color/md_theme_dark_inversePrimary"
+    android:orientation="vertical"
+
     tools:context=".Activities.StartingQuiz">
 
-    <!-- res/layout/activity_result.xml -->
-    <TextView
-        android:id="@+id/text_view_total_score_result"
-        android:layout_width="wrap_content"
+    <View
+        android:layout_width="30dp"
+        android:layout_height="24dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total Score: 0"
-        android:textSize="24sp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="Hasil"
+            android:textAppearance="@style/TextAppearance.Hitorigoto.TitleLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="120dp"
+        android:layout_height="56dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:background="@drawable/img_result_quiz_card"
+        android:orientation="vertical"
+        android:paddingHorizontal="48dp"
+        android:paddingVertical="24dp">
 
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:text="Selamat! Kamu mendapatkan skor"
+
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Hitorigoto.HeadlineSmall" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/text_view_total_score_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+
+            android:textAppearance="@style/TextAppearance.Hitorigoto.DisplayMedium" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:text="Chapter 1"
+
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Hitorigoto.HeadlineSmall" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:text="あ，い，う，え，お"
+
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Hitorigoto.HeadlineSmall" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="120dp"
+        android:layout_height="36dp" />
+
+    <Button
+        android:layout_marginHorizontal="24dp"
+        android:id="@+id/btn_result_to_home"
+        style="Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_light_background"
+        android:onClick="goToMain"
+        android:paddingVertical="16dp"
+        android:text="Kembali ke Home"
+        android:textAppearance="@style/TextAppearance.Hitorigoto.LabelLarge"
+        android:textColor="@color/md_theme_dark_background"
+        app:iconTint="#FBEAEA"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+
+</LinearLayout>

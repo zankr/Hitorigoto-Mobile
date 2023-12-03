@@ -60,12 +60,12 @@ public class StartingQuiz extends AppCompatActivity {
     private void loadHighscore() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         highscore = prefs.getInt(KEY_HIGHSCORE, 0);
-        textViewHighscore.setText("Highscore: " + highscore*20 + "%");
+        textViewHighscore.setText("Skor Kamu: " + highscore*20 + "%");
     }
 
     private void updateHighscore(int highscoreNew) {
         highscore = highscoreNew;
-        textViewHighscore.setText("Highscore: " + highscore);
+        textViewHighscore.setText("Skor Kamu: " + highscore);
 
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
