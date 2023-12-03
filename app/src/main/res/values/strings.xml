@@ -34,4 +34,18 @@
     <string name="desc_about_5h">Dalam kehidupan sehari - hari, dapat mendengarkan percakapan dengan kecepatan normal, dan dapat memahami aliran cerita dan isi utama kalimat.</string>
     <string name="desc_about_5i">Tingkat dapat membaca surat kabar dan mengkritik. Struktur kalimat yang kompleks dan isinya akan ditanya apakah logis dan bisa mengerti. Dan, Anda akan diminta untuk membaca antar baris dari isi kalimat.</string>
     <string name="desc_about_5j">Mampu mendengarkan dan memahami berbagai jenis percakapan yang diucapkan dengan kecepatan alami, dapat memahami secara detail isi pembicaraan dan karakter, Tingkat ini sesuai dengan pemahaman penuh dari bahasa Jepang.</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_course">Course</string>
+    <string name="menu_about">About</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_level_test">Level Test</string>
+    <string name="course_level">JLPT N5</string>
+    <string name="title_hero_home">Selamat datang Ahmad Bustomi!</string>
+    <string name="desc_hero_home">Semoga harimu menyenangkan.</string>
+    <string name="title_course_hero">Mulailah belajar bahasa Jepang di mana saja dan kapan saja!</string>
+    <string name="desc_course_hero">Kembangkan kemampuan bahasa Jepang Anda dengan mulai belajar sekarang!</string>
+    <string name="profile_fullname">Ahmad Bustomi</string>
+    <string name="profile_email">fauzankurniarahman@gmail.com</string>
+    <string name="label_edit_profile">Edit Profile</string>
+    <string name="label_logout">Keluar Akun</string>
 </resources>

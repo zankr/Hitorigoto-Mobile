@@ -16,10 +16,10 @@ import com.example.hitorigoto.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AboutFragment#newInstance} factory method to
+ * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AboutFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +30,7 @@ public class AboutFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public AboutFragment() {
+    public HomeFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class AboutFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AboutFragment.
+     * @return A new instance of fragment HomeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AboutFragment newInstance(String param1, String param2) {
-        AboutFragment fragment = new AboutFragment();
+    public static HomeFragment newInstance(String param1, String param2) {
+        HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +65,7 @@ public class AboutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_about, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         // Call the customizeStatusBar method when the fragment view is created
         customizeStatusBar();
@@ -79,7 +79,7 @@ public class AboutFragment extends Fragment {
             // Set the status bar color to match the color of the top component
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.parseColor("#FFFFFF"));
+            window.setStatusBarColor(Color.parseColor("#C4F18C"));
 
             // Set the status bar text and icon color to black
             View decor = getActivity().getWindow().getDecorView();
