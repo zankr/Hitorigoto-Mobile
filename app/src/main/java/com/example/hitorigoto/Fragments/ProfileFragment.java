@@ -1,6 +1,8 @@
 package com.example.hitorigoto.Fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -101,7 +103,8 @@ public class ProfileFragment extends Fragment {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logoutUser();
+                // Show logout confirmation dialog
+                showLogoutConfirmationDialog();
             }
         });
 
@@ -111,6 +114,23 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
+
+    private void showLogoutConfirmationDialog() {
+        new AlertDialog.Builder(getContext())
+                // Message
+                .setTitle("Konfirmasi Logout")
+                // Confirmation?
+                .setMessage("Apakah anda yakin ingin keluar?")
+                .setPositiveButton("Keluar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // User clicked "Keluar" button, handle logout
+                        logoutUser();
+                    }
+                })
+                .setNegativeButton("Batal", null)
+                .setIcon(R.drawable.ic_logout)
+                .show();
+    }
     private void logoutUser() {
         // Clear the login session, for example using SharedPreferences
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginSession", Context.MODE_PRIVATE);
