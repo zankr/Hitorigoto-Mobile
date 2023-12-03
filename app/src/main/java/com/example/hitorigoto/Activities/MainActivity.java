@@ -50,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
                 .addToBackStack(null)
                 .commit();
     }
+    @Override
+    public void onBackPressed() {
+        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+        if (currentFragment instanceof HomeFragment) {
+            finish(); // Exit the app when on HomeFragment
+        } else {
+            super.onBackPressed(); // Allow normal back press behavior for other fragments
+        }
+    }
+
 }
 
 

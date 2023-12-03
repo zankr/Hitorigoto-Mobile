@@ -119,7 +119,9 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void goToMain(View view) {
-        startActivity(new Intent(this, MainActivity.class));
+        Intent intent = new Intent(SignUp.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
         finish();
     }
 
