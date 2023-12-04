@@ -185,7 +185,7 @@ public class QuizActivity extends AppCompatActivity {
 
         if (answerNr == currentQuestion.getAnswerNr()) {
             score++;
-            textViewScore.setText("Skor: " + score);
+            textViewScore.setText("Skor: " + (score*20));
         }
 
         showSolution();
