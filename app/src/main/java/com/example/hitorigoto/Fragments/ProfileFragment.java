@@ -132,4 +132,18 @@ public class ProfileFragment extends Fragment {
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Fetching the name and email again
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("LoginSession", Context.MODE_PRIVATE);
+        String fullName = sharedPreferences.getString("UserName", "Nama Pengguna");
+        String email = sharedPreferences.getString("UserEmail", "email@contoh.com");
+
+        // Update the TextViews
+        TextView tvProfileFullName = getView().findViewById(R.id.profile_fullname);
+        TextView tvProfileEmail = getView().findViewById(R.id.profile_email);
+        tvProfileFullName.setText(fullName);
+        tvProfileEmail.setText(email);
+    }
 }
