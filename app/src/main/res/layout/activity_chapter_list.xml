@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="12dp"
+    android:orientation="vertical"
+    tools:context=".Activities.ChapterList">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingHorizontal="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="backToMain"
+            android:src="@drawable/ic_left_arrow" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_chapter_list"
+            android:textAppearance="@style/TextAppearance.Hitorigoto.TitleMedium"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_quiz_n5_hiragana" />
+
+        <Space
+            android:layout_width="24dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Hitorigoto.TitleMedium"
+                android:text="@string/label_chapterlist" />
+            
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Hitorigoto.BodyMedium"
+                android:text="@string/desc_chapterlist" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

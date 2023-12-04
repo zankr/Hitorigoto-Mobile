@@ -1,7 +1,7 @@
-// LessonAdapter.java
 package com.example.hitorigoto.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hitorigoto.Activities.ChapterList;
 import com.example.hitorigoto.Models.Lesson;
 import com.example.hitorigoto.R;
 
@@ -39,6 +40,15 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonView
         holder.titleTextView.setText(lesson.getTitle());
         holder.descTextView.setText(lesson.getDescription());
         holder.imageView.setImageResource(lesson.getImage());
+
+        // Set OnClickListener for each item
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ChapterList.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

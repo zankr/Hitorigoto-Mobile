@@ -52,4 +52,7 @@
     <string name="label_simpan_perubahan">Simpan Perubahan</string>
     <string name="label_password_new">Kata sandi baru</string>
     <string name="label_password_confirm">Konfirmasi kata sandi</string>
+    <string name="label_chapterlist">Hiragana</string>
+    <string name="desc_chapterlist">3 Chapters</string>
+    <string name="title_chapter_list">Pilih Chapter</string>
 </resources>
