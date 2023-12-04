@@ -2,6 +2,7 @@ package com.example.hitorigoto.Activities;
 
 import static android.app.PendingIntent.getActivity;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -60,6 +61,7 @@ public class EditProfile extends AppCompatActivity {
             int result = userDatabase.updateUserDetail(currentEmail, newEmail, fullName, newPassword);
 
             if (result > 0) {
+                updateSharedPreferences(fullName, newEmail);
                 showToast("Perubahan berhasil disimpan!");
                 finish();
             } else if (result == -1) {
@@ -127,5 +129,14 @@ public class EditProfile extends AppCompatActivity {
             View decor = getWindow().getDecorView();
             decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
+    }
+    // new SharedPreferences Updater
+    private void updateSharedPreferences(String fullName, String email) {
+        // Update SharedPreferences with the new user information
+        SharedPreferences sharedPreferences = getSharedPreferences("LoginSession", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("UserName", fullName);
+        editor.putString("UserEmail", email);
+        editor.apply();
     }
 }
