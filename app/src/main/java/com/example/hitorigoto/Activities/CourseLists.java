@@ -10,39 +10,38 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.hitorigoto.Adapters.ChapterAdapter;
-import com.example.hitorigoto.Models.ChapterData;
-import com.example.hitorigoto.Models.Chapter;
+
+import com.example.hitorigoto.Adapters.CourseListAdapter;
+import com.example.hitorigoto.Models.CourseList;
+import com.example.hitorigoto.Models.CourseListData;
 import com.example.hitorigoto.R;
 
 import java.util.ArrayList;
 
-public class ChapterList extends AppCompatActivity {
+public class CourseLists extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chapter_list);
+        setContentView(R.layout.activity_course_lists);
 
         customizeStatusBar();
 
         // Find the RecyclerView in your layout
-        RecyclerView recyclerView = findViewById(R.id.rv_chapter);
+        RecyclerView recyclerView = findViewById(R.id.rv_courselist);
 
         // Create a layout manager for the RecyclerView (e.g., LinearLayoutManager)
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        // Initialize the ChapterAdapter with the list of chapters
-        ChapterAdapter chapterAdapter = new ChapterAdapter(this, getChapterList());
-
         // Set the adapter on the RecyclerView
-        recyclerView.setAdapter(chapterAdapter);
+        CourseListAdapter courseListAdapter = new CourseListAdapter(this, getCourseList());
+        recyclerView.setAdapter(courseListAdapter);
     }
 
-    // Sample method to get a list of chapters
-    private ArrayList<Chapter> getChapterList() {
-        return ChapterData.getListData();
+    // Sample method to get a list of courses
+    private ArrayList<CourseList> getCourseList() {
+        return CourseListData.getListData();
     }
 
     public void backToMain(View view) {

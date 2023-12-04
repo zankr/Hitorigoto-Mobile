@@ -18,11 +18,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hitorigoto.Activities.CourseLists;
 import com.example.hitorigoto.Activities.StartingQuiz;
 import com.example.hitorigoto.Adapters.LessonAdapter;
+import com.example.hitorigoto.Models.CourseList;
 import com.example.hitorigoto.Models.Lesson;
 import com.example.hitorigoto.Models.LessonData;
 import com.example.hitorigoto.R;
+import com.google.android.material.appbar.MaterialToolbar;
 
 import java.util.List;
 
@@ -41,17 +44,18 @@ public class HomeFragment extends Fragment {
 
         customizeStatusBar();
 
+        MaterialToolbar topAppBar = view.findViewById(R.id.topAppBar);
+        topAppBar.setNavigationOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), CourseLists.class));
+        });
+
         // Setting up RecyclerView
         RecyclerView recyclerView = view.findViewById(R.id.rv_lesson);
         setupLessonRecyclerView(recyclerView);
 
         Button btnStartQuiz = view.findViewById(R.id.btn_level_test);
-        btnStartQuiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), StartingQuiz.class);
-                startActivity(intent);
-            }
+        btnStartQuiz.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), StartingQuiz.class));
         });
 
         return view;

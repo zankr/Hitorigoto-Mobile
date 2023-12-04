@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hitorigoto.Activities.ChapterList;
+import com.example.hitorigoto.Activities.ChapterLists;
 import com.example.hitorigoto.Models.Lesson;
 import com.example.hitorigoto.R;
 
@@ -45,7 +45,7 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonView
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ChapterList.class);
+                Intent intent = new Intent(context, ChapterLists.class);
                 context.startActivity(intent);
             }
         });

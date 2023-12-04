@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hitorigoto.Activities.ChapterList;
 import com.example.hitorigoto.Activities.StartingQuiz;
 import com.example.hitorigoto.Models.Chapter;
 import com.example.hitorigoto.R;
@@ -46,7 +45,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
             Intent intent = new Intent(context, StartingQuiz.class);
             context.startActivity(intent);
 
-            // Finish the ChapterList activity
+            // Finish the activity
             ((Activity) context).finish();
         });
     }
