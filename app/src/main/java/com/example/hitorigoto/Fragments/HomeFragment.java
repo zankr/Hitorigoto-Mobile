@@ -53,11 +53,6 @@ public class HomeFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.rv_lesson);
         setupLessonRecyclerView(recyclerView);
 
-        Button btnStartQuiz = view.findViewById(R.id.btn_level_test);
-        btnStartQuiz.setOnClickListener(v -> {
-            startActivity(new Intent(getActivity(), StartingQuiz.class));
-        });
-
         return view;
     }
 
