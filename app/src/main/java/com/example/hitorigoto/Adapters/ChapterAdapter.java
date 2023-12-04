@@ -24,7 +24,7 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
 
     public ChapterAdapter(Context context, ArrayList<Chapter> chapterList) {
         this.context = context;
-        this.chapterList = chapterList;;
+        this.chapterList = chapterList;
     }
 
     @NonNull

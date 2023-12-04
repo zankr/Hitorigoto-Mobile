@@ -48,15 +48,15 @@ public class dbQuiz extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-        Question q1 = new Question("Pepek Goreng", "nggong", "arghhh", "bebek", 1);
+        Question q1 = new Question("Cara baca \"あ\"", "A", "I", "U", 1);
         addQuestion(q1);
-        Question q2 = new Question("B is correct", "A", "B", "C", 2);
+        Question q2 = new Question("Cara baca \"い\"", "E", "I", "A", 2);
         addQuestion(q2);
-        Question q3 = new Question("C is correct", "A", "B", "C", 3);
+        Question q3 = new Question("Cara baca \"う\"", "O", "A", "U", 3);
         addQuestion(q3);
-        Question q4 = new Question("A is correct again", "A", "B", "C", 1);
+        Question q4 = new Question("Cara baca \"え\"", "E", "O", "U", 1);
         addQuestion(q4);
-        Question q5 = new Question("B is correct again", "A", "B", "C", 2);
+        Question q5 = new Question("Cara baca \"お\"", "I", "O", "A", 2);
         addQuestion(q5);
     }
 
