@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_theme_dark_inversePrimary"
+    android:background="@color/md_theme_light_primary"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="64dp"
     android:orientation="vertical"
-
+    tools:ignore="HardcodedText"
     tools:context=".Activities.StartingQuiz">
 
-    <View
-        android:layout_width="30dp"
-        android:layout_height="24dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,16 +50,17 @@
     </LinearLayout>
 
     <View
-        android:layout_width="120dp"
-        android:layout_height="56dp" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:background="@drawable/img_result_quiz_card"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_result"
         android:orientation="vertical"
-        android:paddingHorizontal="48dp"
-        android:paddingVertical="24dp">
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="48dp">
 
 
         <TextView
@@ -68,7 +69,6 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="24dp"
             android:text="Selamat! Kamu mendapatkan skor"
-
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.Hitorigoto.HeadlineSmall" />
 
@@ -81,8 +81,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-
             android:textAppearance="@style/TextAppearance.Hitorigoto.DisplayMedium" />
 
         <View
@@ -117,23 +115,22 @@
     </LinearLayout>
 
     <View
-        android:layout_width="120dp"
-        android:layout_height="36dp" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <Button
-        android:layout_marginHorizontal="24dp"
         android:id="@+id/btn_result_to_home"
         style="Widget.Material3.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/md_theme_light_background"
-        android:onClick="goToMain"
+        android:onClick="backToChapterLists"
         android:paddingVertical="16dp"
         android:text="Kembali ke Home"
         android:textAppearance="@style/TextAppearance.Hitorigoto.LabelLarge"
         android:textColor="@color/md_theme_dark_background"
-        app:iconTint="#FBEAEA"
-        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+        tools:ignore="VisualLintButtonSize" />
 
 
 </LinearLayout>

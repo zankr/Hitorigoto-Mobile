@@ -17,9 +17,10 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageButton
+        <Button
             style="@style/Widget.Material3.Button.IconButton"
-            android:src="@drawable/ic_left_arrow"
+            app:iconTint="@color/md_theme_light_onSurface"
+            app:icon="@drawable/ic_left_arrow"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:contentDescription="Kembali ke Getting Started"
@@ -132,7 +133,6 @@
     <Button
         android:id="@+id/btn_sign_up"
         style="Widget.Material3.Button"
-        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="16dp"

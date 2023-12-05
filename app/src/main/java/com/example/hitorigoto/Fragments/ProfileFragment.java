@@ -49,21 +49,15 @@ public class ProfileFragment extends Fragment {
         Button btnLogout = view.findViewById(R.id.btn_logout);
 
         // Button edit profile
-        btnEditProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navigate to EditProfile activity and pass user data
-                goToEditProfile(fullName, email);
-            }
+        btnEditProfile.setOnClickListener(v -> {
+            // Navigate to EditProfile activity and pass user data
+            goToEditProfile(fullName, email);
         });
 
         // Button Log out
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show logout confirmation dialog
-                showLogoutConfirmationDialog();
-            }
+        btnLogout.setOnClickListener(v -> {
+            // Show logout confirmation dialog
+            showLogoutConfirmationDialog();
         });
 
         // Call the customizeStatusBar method when the fragment view is created

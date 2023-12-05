@@ -30,17 +30,13 @@ public class StartingQuiz extends AppCompatActivity {
         loadHighscore();
 
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
-        buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startQuiz();
-            }
-        });
+        buttonStartQuiz.setOnClickListener(v -> startQuiz());
     }
 
     private void startQuiz() {
         Intent intent = new Intent(StartingQuiz.this, QuizActivity.class);
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
+        finish();
     }
 
     @Override
@@ -66,7 +62,7 @@ public class StartingQuiz extends AppCompatActivity {
     private void loadHighscore() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         highscore = prefs.getInt(KEY_HIGHSCORE, 0);
-        textViewHighscore.setText("Skor Kamu: " + highscore * 20 + "%");
+        textViewHighscore.setText("Skor Kamu: " + highscore * 20);
     }
 
     private void updateHighscore(int highscoreNew) {
@@ -77,5 +73,9 @@ public class StartingQuiz extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_HIGHSCORE, highscore);
         editor.apply();
+    }
+
+    public void backToChapterLists(View view) {
+        finish();
     }
 }

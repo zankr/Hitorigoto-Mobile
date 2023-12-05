@@ -27,14 +27,13 @@ public class ResultActivity extends AppCompatActivity {
         int totalScore = getIntent().getIntExtra(QuizActivity.EXTRA_SCORE, 0);
 
         // Display the total score
-        textViewTotalScore.setText("" + totalScore*20);
+        textViewTotalScore.setText(String.valueOf(totalScore * 20));
 
-        // textViewTotalScore.setText(totalScore*20);
+        // textViewTotalScore.setText(totalScore * 20);
         updateHighscore(totalScore);
     }
 
-    public void goToMain(View view) {
-        startActivity(new Intent(this, MainActivity.class));
+    public void backToChapterLists(View view) {
         finish();
     }
 

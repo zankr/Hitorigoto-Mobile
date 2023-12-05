@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,14 +7,9 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="24dp"
     android:layout_marginBottom="24dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp">
-
-        <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+    android:orientation="vertical"
+    android:background="@drawable/bg_outline_12"
+    android:padding="16dp">
 
         <TextView
             android:id="@+id/chapter_title"
@@ -34,5 +29,4 @@
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.Hitorigoto.BodyMedium"
             tools:text="Chapter Description"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+</LinearLayout>

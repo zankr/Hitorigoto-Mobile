@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/md_theme_light_primary"
-
     android:paddingTop="36dp"
-
+    tools:ignore="HardcodedText"
     tools:context=".Activities.QuizActivity">
 
     <LinearLayout
@@ -49,7 +48,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="48dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp" />
 
     <LinearLayout
@@ -77,7 +76,6 @@
                 android:id="@+id/text_view_question_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/text_view_score"
                 android:freezesText="true"
                 android:text="Pertanyaan: 1/x"
                 android:textAppearance="@style/TextAppearance.Hitorigoto.BodyLarge"
@@ -88,7 +86,6 @@
             android:id="@+id/text_view_countdown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:textColor="#FBFBFB"
             android:freezesText="true"
             android:text="00:30"
@@ -98,15 +95,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="48dp"
-        android:layout_height="48dp" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <TextView
         android:id="@+id/text_view_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/radio_group"
-        android:layout_marginBottom="16dp"
         android:freezesText="true"
         android:text="Here will be the question text\nHere will be the question text\nHere will be the question text"
         android:textAlignment="center"
@@ -115,21 +111,21 @@
         android:textSize="20sp" />
 
     <View
-        android:layout_width="64dp"
-        android:layout_height="64dp" />
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:background="@drawable/img_quiz_card">
+        android:background="@drawable/bg_about_3">
 
         <RadioGroup
             android:id="@+id/radio_group"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/radio_button1"
@@ -164,12 +160,11 @@
         <Button
             android:id="@+id/button_confirm_next"
             style="Widget.Material3.Button"
-            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
-            android:text="Confirm"
-            />
+            android:text="Konfirmasi"
+            tools:ignore="VisualLintButtonSize" />
 
 
     </LinearLayout>

@@ -44,14 +44,17 @@ public class HomeFragment extends Fragment {
 
         customizeStatusBar();
 
-        MaterialToolbar topAppBar = view.findViewById(R.id.topAppBar);
-        topAppBar.setNavigationOnClickListener(v -> {
-            startActivity(new Intent(getActivity(), CourseLists.class));
-        });
-
         // Setting up RecyclerView
         RecyclerView recyclerView = view.findViewById(R.id.rv_lesson);
         setupLessonRecyclerView(recyclerView);
+
+        Button btnCourseLists= view.findViewById(R.id.btn_course_lists);
+
+        // Button CourseLists
+        btnCourseLists.setOnClickListener(v -> {
+            // Navigate to CourseLists activity
+            startActivity(new Intent(getActivity(), CourseLists.class));
+        });
 
         return view;
     }
@@ -82,4 +85,5 @@ public class HomeFragment extends Fragment {
 
         recyclerView.setAdapter(lessonAdapter);
     }
+
 }

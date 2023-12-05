@@ -44,9 +44,6 @@ public class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.ChapterV
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(context, StartingQuiz.class);
             context.startActivity(intent);
-
-            // Finish the activity
-            ((Activity) context).finish();
         });
     }
 

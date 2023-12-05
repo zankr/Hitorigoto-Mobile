@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fragment_container"
-        app:itemIconSize="36dp"
+        app:itemIconSize="32dp"
         app:menu="@menu/menu_bottomnav_main"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

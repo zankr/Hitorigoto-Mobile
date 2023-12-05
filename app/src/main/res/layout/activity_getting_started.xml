@@ -72,7 +72,6 @@
 
         <Button
             style="Widget.Material3.Button"
-            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="16dp"
