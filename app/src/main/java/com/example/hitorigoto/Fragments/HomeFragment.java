@@ -1,5 +1,6 @@
 package com.example.hitorigoto.Fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,13 +20,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hitorigoto.Activities.CourseLists;
-import com.example.hitorigoto.Activities.StartingQuiz;
 import com.example.hitorigoto.Adapters.LessonAdapter;
-import com.example.hitorigoto.Models.CourseList;
 import com.example.hitorigoto.Models.Lesson;
 import com.example.hitorigoto.Models.LessonData;
 import com.example.hitorigoto.R;
-import com.google.android.material.appbar.MaterialToolbar;
 
 import java.util.List;
 
@@ -49,11 +47,18 @@ public class HomeFragment extends Fragment {
         setupLessonRecyclerView(recyclerView);
 
         Button btnCourseLists= view.findViewById(R.id.btn_course_lists);
+        Button btnLevelTest = view.findViewById(R.id.btn_level_test);
 
         // Button CourseLists
         btnCourseLists.setOnClickListener(v -> {
             // Navigate to CourseLists activity
             startActivity(new Intent(getActivity(), CourseLists.class));
+        });
+
+        // Button Level Test
+        btnLevelTest.setOnClickListener(v -> {
+            // Show coming soon dialog
+            showNotCompleteDialog();
         });
 
         return view;
@@ -86,4 +91,14 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(lessonAdapter);
     }
 
+    public void showNotCompleteDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Level Test Belum Selesai")
+                .setMessage("Maaf, Anda belum menyelesaikan Course. Silahkan selesaikan Course terlebih dahulu untuk mengikuti Level Test.")
+                .setIcon(R.drawable.ic_test)
+                .setPositiveButton("OK", null);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }

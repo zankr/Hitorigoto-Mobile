@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("androidx.compose.material3:material3:1.1.2")
     implementation ("androidx.compose.material3:material3-window-size-class:1.1.2")
     implementation ("com.codesgood:justifiedtextview:1.1.0")

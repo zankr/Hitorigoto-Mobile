@@ -18,7 +18,7 @@
             android:id="@+id/lesson_img"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:layout_margin="2dp"
+            android:layout_margin="1dp"
             android:src="@drawable/img_n5_hiragana"
             android:scaleType="centerCrop"/>
 

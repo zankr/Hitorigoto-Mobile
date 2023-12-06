@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:background="@drawable/bg_about_3">
+        android:background="@drawable/bg_rounded_top">
 
         <RadioGroup
             android:id="@+id/radio_group"

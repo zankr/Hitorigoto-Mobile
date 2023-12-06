@@ -61,8 +61,4 @@
     <color name="md_theme_dark_surfaceTint">#C5C0FF</color>
     <color name="md_theme_dark_outlineVariant">#47464F</color>
     <color name="md_theme_dark_scrim">#000000</color>
-    <color name="colorQuizPrimary">#795548</color>
-    <color name="colorQuizPrimaryDark">#5D4037</color>
-    <color name="colorQuizAccent">#FFEB3B</color>
-    <color name="colorQuizBackground">#BCAAA4</color>
 </resources>

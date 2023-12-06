@@ -39,7 +39,7 @@ public class AboutFragment extends Fragment {
             // Set the status bar color to match top component color
             Window window = getActivity().getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.parseColor("#F8FDFF"));
+            window.setStatusBarColor(Color.parseColor("#E4DFFF"));
 
             // Set the status bar text and icon color to black
             View decor = getActivity().getWindow().getDecorView();

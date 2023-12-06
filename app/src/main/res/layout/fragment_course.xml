@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/title_course_hero"
-                    android:textAppearance="@style/TextAppearance.Hitorigoto.HeadlineSmall"
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.HeadlineMedium"
                     android:textStyle="bold" />
 
                 <Space
@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/desc_course_hero"
-                    android:textAppearance="@style/TextAppearance.Hitorigoto.BodyLarge" />
+                    android:textAppearance="@style/TextAppearance.Hitorigoto.BodyMedium" />
 
             </LinearLayout>
 
